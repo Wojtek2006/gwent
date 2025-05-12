@@ -11,7 +11,7 @@
 .site__header {
 	position: relative;
 	z-index: 1;
-	box-shadow: 0px 10px 24px 0px rgb(125, 113, 74);
+	box-shadow: 0px 10px 24px 0px rgb(32, 29, 18);
 }
 
 .header__content {
@@ -78,11 +78,12 @@
 	justify-content: center;
 	align-items: center;
 
-	padding-block: 6rem;
+	padding-block: 7rem;
 }
 
 .card {
 	overflow: hidden;
+	position: relative;
 	
 	min-height: 160px;
 
@@ -95,25 +96,35 @@
 }
 
 .card:hover {
-	opacity: 1;
+	/* opacity: 1; */
 	border: 5px solid hsl(143, 47%, 44%);
 }
 
 .card img {
 	display: block;
+	position: absolute;
 
-	object-fit: contain;
+	top: -5px;
+	left: -4px;
 
-	transition: all 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out, opacity 0.45s ease-in-out;
 }
 
 .card:hover img {
 	transform: scale(1.1);
 }
 
-
+.flipped {
+	opacity: 0;
+}
 
 /* FOOTER */
+
+.site__footer {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px -10px 24px 0px rgb(32, 29, 18);
+}
 
 .footer__content {
 	display: flex;
